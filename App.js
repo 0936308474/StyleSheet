@@ -1,3 +1,81 @@
+/*--------------------------BAI 3 -------------------------------------*/
+import React, {Component} from 'react';
+import {Text, View, StyleSheet} from 'react-native';
+
+export default class App extends Component {
+  render() {
+    return (
+      <View style={{flex: 1, flexDirection: 'column'}}>
+
+        {/* hien thi 1,2 */}
+        <View
+          style={[
+            Style.viewFormat,
+            {flex: 1, flexDirection: 'row', alignItems: 'stretch'},
+          ]}>
+          <View
+            style={[Style.viewFormat, {flex: 1, backgroundColor: '#ff0000', borderWidth:5}]}>
+            <Text style={Style.textFormatWhite}>1</Text>
+          </View>
+          <View
+            style={[Style.viewFormat, {flex: 2, backgroundColor: '#ffff00', borderTopWidth:5, borderRightWidth:5, borderBottomWidth:5}]}>
+            <Text style={Style.textFormatWhite}>2</Text>
+          </View>
+        </View>
+        {/* View hient hi 3,4,5 */}
+        <View style={{flex: 3, flexDirection: 'row'}}>
+          {/* hien thi 3,4 */}
+          <View
+            style={[
+              Style.viewFormat,
+              {
+                flex: 2.5,
+                flexDirection: 'column',
+                alignItems: 'stretch',
+              },
+            ]}>
+            <View
+              style={[Style.viewFormat, {flex: 1, backgroundColor: '#008000', borderLeftWidth:5, borderRightWidth:5, borderBottomWidth:5}]}>
+              <Text style={Style.textFormatWhite}>3</Text>
+            </View>
+            <View
+              style={[Style.viewFormat, {flex: 1, backgroundColor: '#f08080',borderLeftWidth:5, borderRightWidth:5, borderBottomWidth:5}]}>
+              <Text style={Style.textFormatWhite}>4</Text>
+            </View>
+          </View>
+
+          {/* hien thi 5 */}
+          <View
+            style={[Style.viewFormat,{
+              flex: 1,
+              flexDirection:'column',
+              backgroundColor: '#40e0d0',borderRightWidth:5, borderBottomWidth:5
+            }]}>
+            <Text style={Style.textFormatWhite}>5</Text>
+          </View>
+        </View>
+
+        {/* hien thi 6,7 */}
+        <View
+          style={[
+            Style.viewFormat,
+            {flex: 1.3, flexDirection: 'row', alignItems: 'stretch'},
+          ]}>
+          <View
+            style={[Style.viewFormat, {flex: 1, backgroundColor: '#ff8c00',borderLeftWidth:5, borderRightWidth:5, borderBottomWidth:5}]}>
+            <Text style={Style.textFormatWhite}>6</Text>
+          </View>
+          <View
+            style={[Style.viewFormat, {flex: 2, backgroundColor: '#0000ff', borderRightWidth:5, borderBottomWidth:5}]}>
+            <Text style={Style.textFormatWhite}>7</Text>
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
+
+/*--------------------------BAI 3 -------------------------------------
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
@@ -79,7 +157,7 @@ export default class App extends Component {
     );
   }
 }
-
+/*
 /*--------------------------BAI 2 -------------------------------------
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
