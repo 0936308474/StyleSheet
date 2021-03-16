@@ -5,6 +5,89 @@ export default class App extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
+        <View
+          style={[
+            Style.viewFormat,
+            {flex: 1, flexDirection: 'column', alignItems: 'stretch'},
+          ]}>
+          <View
+            style={[
+              Style.viewFormat,
+              {flex: 1, backgroundColor: '#ff0000', borderWidth: 5},
+            ]}>
+            <Text style={Style.textFormatWhite}>1</Text>
+          </View>
+        </View>
+
+        <View
+          style={[
+            Style.viewFormat,
+            {flex: 2.5, flexDirection: 'row', alignItems: 'stretch'},
+          ]}>
+          <View
+            style={[
+              Style.viewFormat,
+              {
+                flex: 1,
+                backgroundColor: '#ffff00',
+                borderLeftWidth: 5,
+                borderRightWidth: 5,
+                borderBottomWidth: 5,
+              },
+            ]}>
+            <Text style={Style.textFormatWhite}>2</Text>
+          </View>
+
+          <View
+            style={[
+              Style.viewFormat,
+              {flex: 2, alignItems: 'stretch', flexDirection: 'column'},
+            ]}>
+            <View style={[Style.viewFormat, {flex: 2, alignItems: 'stretch'}]}>
+              <View
+                style={[
+                  Style.viewFormat,
+                  {flex: 1, backgroundColor: '#4682b4', borderRightWidth:5, borderBottomWidth:5},
+                ]}>
+                <Text style={Style.textFormatWhite}>3</Text>
+              </View>
+            </View>
+
+            <View
+              style={[
+                Style.viewFormat,
+                {flex: 1, alignItems: 'stretch', flexDirection: 'row'},
+              ]}>
+              <View
+                style={[
+                  Style.viewFormat,
+                  {flex: 1, backgroundColor: '#ffc0cb', borderRightWidth:5, borderBottomWidth:5},
+                ]}>
+                <Text style={Style.textFormatWhite}>4</Text>
+              </View>
+              <View
+                style={[
+                  Style.viewFormat,
+                  {flex: 1, backgroundColor: '#db7093', borderRightWidth:5, borderBottomWidth:5},
+                ]}>
+                <Text style={Style.textFormatWhite}>5</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
+
+/*--------------------------BAI 2 -------------------------------------
+import React, {Component} from 'react';
+import {Text, View, StyleSheet} from 'react-native';
+
+export default class App extends Component {
+  render() {
+    return (
+      <View style={{flex: 1}}>
         <View style={[Style.viewFormat, {flex: 2.5, flexDirection:'column',alignItems:'stretch'}]}>
           <View style={[Style.viewFormat, {flex: 1, backgroundColor:'#ff0000'}]}>
             <Text style={Style.textFormat}>A</Text>
@@ -38,7 +121,7 @@ export default class App extends Component {
     );
   }
 }
-
+*/
 /*--------------------------BAI 1 -------------------------------------
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
@@ -138,9 +221,19 @@ const Style = StyleSheet.create({
   textFormat: {
     fontSize: 25,
   },
+  textFormatWhite: {
+    fontSize: 30,
+    color: '#ffffff',
+  },
   viewFormat: {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+  },
+  viewFormatBorder: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    borderWidth: 2,
   },
 });
