@@ -1,5 +1,9 @@
+
+
 import React, {Component} from 'react';
-import {Text, View, SafeAreaView, TouchableOpacity} from 'react-native';
+import {Text, View, SafeAreaView, TouchableOpacity, Dimensions} from 'react-native';
+import screenDimension from '../helpers/screenDimension';
+
 
 export default class MainScreen extends Component {
   render() {
@@ -29,8 +33,8 @@ export default class MainScreen extends Component {
         onPress={()=>{alert('hi chien')}}
         activeOpacity={0.5}
           style={{
-            width: 80,
-            height: 50,
+            width: screenDimension.getWidth()/4.5,
+            height: screenDimension.getHeight()/15,
             borderWidth: 1,
             borderRadius: 5,
             backgroundColor: '#ffa500',
